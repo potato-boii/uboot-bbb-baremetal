@@ -8,7 +8,7 @@ fi
 sys=$(uname -m)
 
 wdir="$PWD"
-disk="/dev/sdb"
+disk="/dev/sdb1"
 
 if [ "x${sys}" = "xarmv7l" ] ; then
 	if [ -f ${wdir}/MLO ] && [ -f ${wdir}/u-boot-dtb.img ] ; then
