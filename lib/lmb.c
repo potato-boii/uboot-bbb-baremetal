@@ -169,6 +169,8 @@ void lmb_init_and_reserve(struct lmb *lmb, struct bd_info *bd, void *fdt_blob)
 
 	lmb_init(lmb);
 
+  lmb_add(lmb, 0x402f0400, 0xfc00); //custom SRAM block
+
 	for (i = 0; i < CONFIG_NR_DRAM_BANKS; i++) {
 		if (bd->bi_dram[i].size) {
 			lmb_add(lmb, bd->bi_dram[i].start,
